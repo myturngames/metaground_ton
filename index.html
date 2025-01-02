@@ -13,6 +13,9 @@
 
     <!-- TON -->
     <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+	
+	<!-- GA -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-L9532B77MF"></script>
 </head>
 <body>
     <div id="unity-container" class="unity-desktop">
@@ -26,6 +29,11 @@
     </div>
 
     <script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-L9532B77MF');
+	
         window.onload = async () => {
             window.Telegram.WebApp.ready();
             window.Telegram.WebApp.expand();
